@@ -227,6 +227,9 @@ form  [type*="submit"]:hover {
 		width: 95vw;
 		height: 100vh;
 	}
+	body {
+		background: none;
+	}
 	#tela_login, #tela_cadastro {
 		border: none;
 		height: 100vh;
@@ -298,8 +301,8 @@ form  [type*="submit"]:hover {
 	.cadasto_login_area {
 		padding: 40px 0;
 	}
-	.animation_login {
-		height: 120vh;
+	.animation_login, .animation_cadastro {
+		height: 125vh;
 	}
 }
 @media (max-width: 547px) {
@@ -321,6 +324,11 @@ form  [type*="submit"]:hover {
 		padding: 12px;
 		width: 18vw;
 		font-size: 3vw;
+	}
+}
+@media (max-width: 500px) {
+	#tela_cadastro {
+		height: 110vh;
 	}
 }
 @media (max-width: 425px) {
