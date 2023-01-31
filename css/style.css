@@ -3,27 +3,37 @@
 	margin: 0;
 	box-sizing: content-box;
 }
+
 body {
 	margin: 0;
-	background: url(../images/2.jpg);
+	background: url(../images/1.jpg);
 	background-size: cover;
 }
+
 nav {
 	width: 100%;
-    height: 100vh;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
+.display-none {
+	display: none !important;
+}
+
 .container {
 	width: 65vw;
 	height: 87vh;
+	position: relative;
+	overflow: hidden;
 	background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
 	border-radius: 3%;
 	box-shadow: 0px 0px 50px #80808087;
 }
+
 /*EDITANDO TODA A PARTE DO CADASTRO*/
-#tela_cadastro  {
+#tela_cadastro {
 	float: left;
 	z-index: 10;
 	display: flex;
@@ -31,7 +41,30 @@ nav {
 	height: 87vh;
 	border-radius: 3%;
 }
-.cadastro  {
+
+@keyframes fade-down {
+	0% {
+		opacity: 0;
+		transform: translate(5px, -25px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes fade-up {
+	0% {
+		opacity: 0;
+		transform: translate(0px, 25px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+}
+
+.cadastro {
 	float: left;
 	height: 87vh;
 	margin: 0;
@@ -42,21 +75,25 @@ nav {
 	justify-content: center;
 	align-items: center;
 	border-radius: 3% 0% 0% 3%;
+	animation: fade-down 0.3s;
 }
+
 .cadastro h1 {
 	text-align: center;
 	color: white;
 	font-size: 2.3vw;
 	font-family: 'Ubuntu', sans-serif;
 }
-/*EDITANDO FORM*/  
+
+/*EDITANDO FORM*/
 form {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
-form input{
+
+form input {
 	margin-top: 10px;
 	padding: 15px;
 	padding-left: 47px;
@@ -65,22 +102,25 @@ form input{
 	border: none;
 	color: #434343;
 }
+
 form i {
 	font-size: 20px;
 	color: white;
 }
+
 form i::before {
 	position: absolute;
-    line-height: 65px;
-    color: #7356cc;
-    margin-left: 15px;
+	line-height: 65px;
+	color: #7356cc;
+	margin-left: 15px;
 }
-form  [type*="submit"] {
+
+form [type*="submit"] {
 	color: white;
 	padding: 10px;
 	font-family: 'Ubuntu', sans-serif;
 	width: 11vw;
-    font-size: 1.4vw;
+	font-size: 1.4vw;
 	font-weight: bold;
 	border: 1px solid;
 	border-radius: 20px;
@@ -88,29 +128,35 @@ form  [type*="submit"] {
 	background-color: transparent;
 	transition: background 0.4s;
 }
-form  [type*="submit"]:hover {
+
+form [type*="submit"]:hover {
 	background-color: white;
 	color: #7356cc;
 	border: 1px solid transparent;
 }
-/*EDITANDO AS REDES SOCIAIS*/  
+
+/*EDITANDO AS REDES SOCIAIS*/
 .social_media {
 	justify-content: center;
 	display: flex;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
 .social_media i {
 	transition: 0.4s;
 	font-size: 2.3vw;
 	color: #fff;
 }
-.social_media a{
+
+.social_media a {
 	margin-right: 15px;
 }
+
 .social_media i:hover {
 	text-shadow: 0px 0px 10px white;
 }
+
 /*EDITANDO PARTE DO LOGIN NA TELA DE CADASTRO*/
 .cadasto_login_area {
 	width: 40%;
@@ -121,23 +167,27 @@ form  [type*="submit"]:hover {
 	flex-direction: column;
 	border-radius: 15% 0% 0% 50%;
 	background-color: white;
+	animation: fade-up 0.3s;
 }
+
 .ca2 {
 	border-radius: 0% 50% 15% 0%;
 }
+
 .cadastro_login h1 {
 	text-align: center;
 	color: #5f72bd;
 	font-size: 2.3vw;
 	font-family: 'Ubuntu', sans-serif;
 }
-.button_login button{
+
+.button_login button {
 	margin-top: 10px;
 	color: #7356cc;
 	padding: 10px;
 	font-family: 'Ubuntu', sans-serif;
 	width: 11vw;
-    font-size: 1.4vw;
+	font-size: 1.4vw;
 	font-weight: bold;
 	border: 1px solid #7356cc;
 	border-radius: 20px;
@@ -145,26 +195,30 @@ form  [type*="submit"]:hover {
 	background-color: white;
 	transition: background 0.4s;
 }
+
 .button_login button:hover {
 	background-color: #7356cc;
 	color: white;
 	border: 1px solid transparent;
 }
+
 /*EDITANDO TELA  DE LOGIN*/
-#tela_login  {
+#tela_login {
 	background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
 	position: absolute;
-    float: right;
-    height: 87vh;
+	float: right;
+	height: 87vh;
 	width: 65vw;
 	z-index: 9;
 	display: flex;
 	flex-direction: row-reverse;
 	border-radius: 3%;
 }
+
 .index {
-	z-index: -1!important;
+	z-index: -1 !important;
 }
+
 .login {
 	height: 87vh;
 	margin: 0;
@@ -174,112 +228,122 @@ form  [type*="submit"]:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	animation: fade-down 0.3s;
 }
+
 .login h1 {
 	text-align: center;
 	color: white;
 	font-size: 2.3vw;
 	font-family: 'Ubuntu', sans-serif;
 }
+
 /*O FORMULARIO E AS REDES SOCIAIS USAM O MESMO PADRAO*/
-.login_login h1{
+.login_login h1 {
 	text-align: center;
 	color: #5f72bd;
 	font-size: 2.3vw;
 	font-family: 'Ubuntu', sans-serif;
 }
+
 /*EDITANDO  ANIMAÇÕES  DA  PAG*/
 .animation_cadastro {
-	background: white; 
-	position: absolute;
-	height: inherit;
-	border-radius: 3%;
 	animation: an_cadastro 1.5s;
 }
+
 .animation_login {
-	background: white;
-	right: 0px;
-	position: absolute;
-    height: inherit;
-	border-radius: 3%;
 	animation: an_login 1.5s;
 }
-@keyframes an_cadastro{
-	0%{width: 67.5%; z-index: 10;}
-	100%{width: 0%;}
-}
-@keyframes an_login {
-	0%{width: 100%; z-index: 15;}
-	100%{width: 0%;}
-}
+
 /*responsividade com media*/
 
 @media (max-width: 1024px) {
 	.container {
 		width: 85vw;
 	}
+
 	#tela_login {
 		width: inherit;
 	}
 }
+
 @media (max-width: 768px) {
 	.container {
 		width: 95vw;
 		height: 100vh;
 	}
+
 	body {
 		background: none;
 	}
-	#tela_login, #tela_cadastro {
+
+	#tela_login,
+	#tela_cadastro {
 		border: none;
 		height: 100vh;
 		flex-direction: column;
-    	justify-content: space-between;
-    	align-items: center;
+		justify-content: space-between;
+		align-items: center;
 	}
+
 	#tela_login {
 		height: 108vh;
 	}
-	.login, .cadasto_login_area, .cadastro {
+
+	.login,
+	.cadasto_login_area,
+	.cadastro {
 		height: auto;
 		border: none;
 	}
+
 	.login {
 		width: inherit;
-    	padding: 10vw 0 0;
+		padding: 10vw 0 0;
 	}
-	.login h1, .login_login h1, .cadastro h1, .cadastro_login h1 {
+
+	.login h1,
+	.login_login h1,
+	.cadastro h1,
+	.cadastro_login h1 {
 		font-size: 5vw;
 	}
+
 	.social_media i {
 		font-size: 5vw;
 	}
+
 	form input {
 		padding: 20px;
-    	padding-left: 47px;
-    	width: 45vw;
-    	border-radius: 30px;
+		padding-left: 47px;
+		width: 45vw;
+		border-radius: 30px;
 	}
+
 	form i::before {
 		line-height: 75px;
 	}
+
 	form [type*="submit"] {
 		padding: 10px;
-   		width: 16vw;
-    	font-size: 2.5vw;
-    	border: 2px solid;
-    	border-radius: 30px;
+		width: 16vw;
+		font-size: 2.5vw;
+		border: 2px solid;
+		border-radius: 30px;
 	}
+
 	.cadasto_login_area {
 		width: inherit;
 		border-radius: 0;
 		padding: 35px 0;
 		border-radius: 0% 0% 3% 3%;
 	}
+
 	.button_login {
 		width: fit-content;
-    	margin: auto;
+		margin: auto;
 	}
+
 	.button_login button {
 		padding: 10px;
 		width: 16vw;
@@ -287,68 +351,95 @@ form  [type*="submit"]:hover {
 		border: 2px solid;
 		border-radius: 30px;
 	}
+
 	.cadastro {
 		padding: 7vw 0 5vw;
 	}
-	.animation_cadastro, .animation_login {
+
+	.animation_cadastro,
+	.animation_login {
 		height: 108vh;
 	}
 }
-@media (max-width: 660px){
+
+@media (max-width: 660px) {
 	.login {
 		padding: 15vw 0 0;
 	}
+
 	.cadasto_login_area {
 		padding: 40px 0;
 	}
-	.animation_login, .animation_cadastro {
+
+	.animation_login,
+	.animation_cadastro {
 		height: 125vh;
 	}
 }
+
 @media (max-width: 547px) {
 	.login {
 		padding: 20% 0 0;
 	}
-	.login h1, .login_login h1, .cadastro h1, .cadastro_login h1 {
+
+	.login h1,
+	.login_login h1,
+	.cadastro h1,
+	.cadastro_login h1 {
 		font-size: 6vw;
 	}
+
 	.social_media i {
 		font-size: 6vw;
 	}
+
 	form [type*="submit"] {
 		padding: 12px;
 		width: 18vw;
 		font-size: 3vw;
 	}
+
 	.button_login button {
 		padding: 12px;
 		width: 18vw;
 		font-size: 3vw;
 	}
 }
+
 @media (max-width: 500px) {
 	#tela_cadastro {
 		height: 110vh;
 	}
 }
+
 @media (max-width: 425px) {
 	.container {
 		width: 100vw;
 	}
+
 	#tela_login {
 		border-radius: 0%;
 	}
+
 	.login {
 		margin: auto;
 		padding: 0%;
 	}
-	.login h1, .login_login h1, .cadastro h1, .cadastro_login h1, .social_media i {
+
+	.login h1,
+	.login_login h1,
+	.cadastro h1,
+	.cadastro_login h1,
+	.social_media i {
 		font-size: 8vw;
 	}
+
 	form input {
 		width: 60vw;
 	}
-	form [type*="submit"], .button_login button {
+
+	form [type*="submit"],
+	.button_login button {
 		padding: 12px;
 		width: 25vw;
 		font-size: 4vw;
