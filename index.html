@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<script type="text/javascript" src="js/javascript.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/5acb55238f.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<meta name="viewport" content="width=device-width,user-scalable=0"/>
+	<meta name="viewport" content="width=device-width,user-scalable=0" />
 	<!--gildasioabraaorespositorio!-->
 	<meta charset="utf-8">
 	<title>Layout Login</title>
 </head>
+
 <body>
 	<nav>
 		<div class="container" id="container_geral">
-			<div id="tela_cadastro">
+			<div id="tela_cadastro" class="screen display-none">
 				<div class="back_cadastro"></div>
-			<div class="cadastro">
-				<h1>Junte-se a nós</h1>	
-			<div class="social_media">
-				<a href=""><i class="fab fa-facebook"></i></a>
-				<a href=""><i class="fab fa-twitter"></i></a>
-				<a href=""><i class="fab fa-google-plus"></i></a>
-			</div>
-				<div class="form_cadastro">
-					<form method="post">
-				<i class="fas fa-envelope"><input type="e-mail" name="e-mail" placeholder="Escreva seu e-mail" required></i>
-				<i class="fas fa-lock"><input type="password" name="password" placeholder="Digite a sua senha" required></i>
-				<i class="fas fa-lock"><input type="password" name="password" placeholder="Confirmar Senha" required></i>
-					<input type="submit" name="confirmar" value="Cadastre-se">
-					</form>
+				<div class="cadastro">
+					<h1>Junte-se a nós</h1>
+					<div class="social_media">
+						<a href=""><i class="fab fa-facebook"></i></a>
+						<a href=""><i class="fab fa-twitter"></i></a>
+						<a href=""><i class="fab fa-google-plus"></i></a>
+					</div>
+					<div class="form_cadastro">
+						<form method="post">
+							<i class="fas fa-envelope"><input type="e-mail" name="e-mail" placeholder="Escreva seu e-mail"
+									required></i>
+							<i class="fas fa-lock"><input type="password" name="password" placeholder="Digite a sua senha"
+									required></i>
+							<i class="fas fa-lock"><input type="password" name="password" placeholder="Confirmar Senha" required></i>
+							<input type="submit" name="confirmar" value="Cadastre-se">
+						</form>
+					</div>
 				</div>
-			</div>
 				<div class="cadasto_login_area ca2">
 					<div class="cadastro_login">
 						<h1>Faça Login</h1>
 						<div class="button_login">
-							<button onclick="button_login()" id="button_login">Login</button>
+							<button onclick="changeViewScreen()" id="button_login">Login</button>
 						</div>
 					</div>
 				</div>
 			</div>
-				<div id="tela_login">
-						<div class="login">
-							<div class="back_login"></div>
-					<h1>Bem vindo(a) de volta</h1>	
-			<div class="social_media">
-				<a href=""><i class="fab fa-facebook"></i></a>
-				<a href=""><i class="fab fa-twitter"></i></a>
-				<a href=""><i class="fab fa-google-plus"></i></a>
-			</div>
-				<div class="form_login">
-					<form method="post">
-				<i class="fas fa-envelope"><input type="e-mail" name="e-mail" placeholder="Escreva seu e-mail" required></i>
-				<i class="fas fa-lock"><input type="password" name="password" placeholder="Digite a sua senha" required></i>
-					<input type="submit" name="confirmar" value="Login">
-					</form>
+			<div id="tela_login" class="screen animation_login">
+				<div class="login">
+					<div class="back_login"></div>
+					<h1>Bem vindo(a) de volta</h1>
+					<div class="social_media">
+						<a href=""><i class="fab fa-facebook"></i></a>
+						<a href=""><i class="fab fa-twitter"></i></a>
+						<a href=""><i class="fab fa-google-plus"></i></a>
+					</div>
+					<div class="form_login">
+						<form method="post">
+							<i class="fas fa-envelope"><input type="e-mail" name="e-mail" placeholder="Escreva seu e-mail"
+									required></i>
+							<i class="fas fa-lock"><input type="password" name="password" placeholder="Digite a sua senha"
+									required></i>
+							<input type="submit" name="confirmar" value="Login">
+						</form>
+					</div>
 				</div>
-			</div>
 				<div class="cadasto_login_area">
 					<div class="login_login">
 						<h1>Junte-se</h1>
 						<div class="button_login">
-							<button onclick="button_cadastro()">Cadastre-se</button>
+							<button onclick="changeViewScreen()">Cadastre-se</button>
 						</div>
 					</div>
 				</div>
 			</div>
 	</nav>
 </body>
+
 </html>
